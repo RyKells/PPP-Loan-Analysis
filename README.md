@@ -61,9 +61,14 @@ The NAICS data was made avilable through their [website](https://www.naics.com/)
 After getting my data cleaned I next wanted to look at several subsets of the data in order to answer my motivating questions: state data, sector data, industry group data, and finally industry group data.
 
 ### State Data:
-Looking at the state data
+Looking at the state data I was a little taken aback at how linear the relationship was between the number of loans per state and the number of busineses per state.
 
-![Types](Charts/BusinessTypes.png)        ![BusinessTypes](Charts/BusinessTypes.png)
+![LC_vs_Bus_State](Charts/N_Loans_vs_N_Businesses_State.png)        
+
+
+Given the relationship of the first chart, it wasn't too surpising to see that the amount of loans per state had a similarly linear relationship with the number of businesses in each state.
+
+![LA_vs_Bus_State](Charts/Amount_Loaned_vs_N_Businesses_State.png)
 
 
 
