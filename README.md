@@ -9,8 +9,8 @@ The Coronavirus Aid, Relief, and Economic Security [(CARES)](https://home.treasu
 ## Motivating Question(s):
 What was the distribution of PPP loans?
 * Did certain states disproportionately benefit from the PPP loan program?
-* Did certain sectors or industries receive more or less funding than others?
 * What was the relationship between jobs retained and the loan amount?
+* Did certain sectors or industries receive more or less funding than others?
 
 ## The Data:
 The data was made available through the Small Business Administration (SBA) [website](https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program), the governmental agency tasked with the implementation of the PPP program (along with participating lenders). Initially, the SBA only released loan data for companies that received loans of less than $150k. However, after mounting pressure from Congress, governmental oversight agencies, and outside groups, the SBA released loan data for companies that received a loan of more than [$150k.](https://fortune.com/2020/06/22/ppp-loan-transparency-biggest-loans-companies-nonprofits-recipients/) 
@@ -40,7 +40,9 @@ Looking at the remaining columns, there were several that had good data, but I f
 
 The `BusinessType` column contained 17 unique values: `Rollover as Business Start-Ups (ROB)`, `Employee Stock Ownership Plan(ESOP)`, `Joint Venture`,`Tenant in Common`, `Trust`, `Non-Profit Childcare Center`, `Cooperative`, `Professional Association`, `Limited Liability Partnership`, `Partnership`, `Independent Contractors`, `Non-Profit Organization`, `Self-Employed Individuals`, `Subchapter S Corporation`, `Sole Proprietorship`, `Corporation`, `Limited Liability Company(LLC)`. The breakdown of loans by business type was particularly top heavy, not surprising, with the top 10 business types making up 99.78% of loans.
 
+
 ![BusinessTypes](Charts/BusinessTypes2.png)
+
 
 ### 2. Merging, Importing and Cleaning REPHESH MASTER.CSV PLACEHOLDER
 My first step in dealing with the sub $150k dataset was to merge all of of the `.csv` values into one master `.csv`. I first downloaded and unziped the `.zip` file from the SBA, then placed the individual files into one master folder and merged them together using `cat *.csv > Master.csv`. For the purposes of this analysis I was only interested in looking at the 50 U.S. states along with District of Columbia (D.C.). Once I had my master `.csv` I used Docker images provided by Jupyter Docker Stacks to create and start a container with Spark and PySpark.
@@ -69,27 +71,55 @@ Finally, I wanted to examine the ratio of jobs retained vs. the amount loaned. T
 
 ### State Relationships:
 
-Looking at the state data I was a little taken aback at how linear the relationship was between the number of loans per state and the number of busineses per state.
+Looking at the state data I was a little taken aback at how linear the relationship was between the number of loans per state and the number of busineses per state. Part of me thought that states hardest hit by COVID-19 would be potential outliers compared to other states.
+
 
 ![LC_vs_Bus_State](Charts/N_Loans_vs_N_Businesses_State.png)        
 
+
 Given the relationship of the first chart, it wasn't too surpising to see that the amount of loans per state had a similarly linear relationship with the number of businesses in each state.
+
 
 ![LA_vs_Bus_State](Charts/Amount_Loaned_vs_N_Businesses_State.png)
 
-Looking at the distribution of the percentage of businesses that received funding in each state, 
+
+Looking at the percentage of businesses that received funding in each state, the distribution was a little less uniform than I was expecting given the fairly tight linear relationships seen above. As well, some of the states hit hardest by COVID-19 (ex. Connecticut, New Jersey and Massachusetts) were below average in terms of the percentage of the state's businesse which received funding. 
 
 
-
-At first my instinct led my to believe that the states most afflicted by COVID-19 would have a more skewed higher proportion of loans an
-
+![P_Funded_By_State](Charts/P_Funded_State.png)
 
 
-Sector DF
+To further explore this idea, I decided to look at a probability density function (PDF).
+
+
+![Dist_P_Funded](Charts/Dist_P_Funded.png)
+
+
+I decided to use a 95% confidence interval for the distribution and found that every state fit within the 95% confidence interval, except for one: Mississippi. Mississippi had 33.85% of it's businesses funded, well above the upper bound of the PDF. Mississippi's cumulative distribution fuction (CDF) indicates a likelihood of 0.74% that Mississippi would receive that much funding as a percentage of the state's businesses. However, Mississippi has the [highest poverty rate](https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_poverty_rate) of any state in America and PPP is a government program, so in this case the outlier seems to have some justification. 
+
+
+Finally, in examining my 'bang-for-the_buck' metric, I noticed a fairly uniform distribution. The distribution appeared to have less variability than the percentage of businesses funded by state. However, there did appear to be one major outlier, Utah.
+
+
+![JR_LA_State](Charts/JR_LA_State.png)
+
+
+Again, to further explore this outlier, I decided to look at a probability density function (PDF).
+
+
+![Dist_JR_LA](Charts/Dist_JR_LA.png)
+
+
+I used a 95% confidence interval, same as before, and again found that every state fit within the 95% confidence interval, except for Utah. Utah's ratio of Jobs Retained (per thousand) to Loan Amount Received (per million) came in at 0.2389. According to the CDF, this indicates a likelihood of 0.007%. There wasn't anything that stood out to me in particular about Utah, but after digging deeper, it appears that a substantial portion *approx ~ 20%* of the state's PPP money was lent out by one bank, Zions Bank, which is headquartered in Salt Lake City and is the [largest full-service commerical bank in Utah](https://www.sec.gov/Archives/edgar/data/109380/000010938020000092/zions-20191231.htm) and outnumbers both JPMorganChase and Wells Fargo in number of branches within the state.  
+
+### Sector Data:
+After examining the state data, I next took a look at the NAICS sector data an specifically looked at a breakdown of sectors vs. the average loan.
+
 
 ![Sector_vs Avg](Charts/Sector_vs_Avg5.png)
 
 
+It was not surpusing to see sectors like Construction, Food Services, Health Care, and Manufacturing come in above average in terms of loan amounts given how these sectors were affected by COVID-19. 
 
 Indusry Group DF
 
