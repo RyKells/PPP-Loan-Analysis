@@ -190,4 +190,4 @@ It was not surprising to see sectors like Construction, Food Services, Health Ca
 
 
 ## Wrap-Up and Further Analysis:
-The sub $150k PPP loan dataset is quite extensive. I wish I could have dug a little bit deeper into the NAICS data to get a better idea of the underlying distribution of PPP money. I also would have liked to get a choropleth map together to examine various variables throughout the U.S. (either by state, city, or zip code). Additionally, pulling in population data would be interesting to see how things are broken down on a per capita basis. There are a lot of different ways to slice the data.
+The sub $150k PPP loan dataset is quite extensive. I wish I could have dug a little bit deeper into the NAICS data to get a better idea of the underlying distribution of PPP money. I also would have liked to get a choropleth map together to examine variables throughout the U.S. (either by state, city, or zip code) and possibly incorporate COVID-19 data. Additionally, pulling in population data would be interesting to see how things are broken down on a per capita basis. There are a lot of different ways to slice the data.
