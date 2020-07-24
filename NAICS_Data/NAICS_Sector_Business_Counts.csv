@@ -1,0 +1,21 @@
+NAICS_Sector,NAICS_Sector_Count
+"Agriculture, Forestry, Fishing and Hunting",381477
+"Mining, Quarrying, and Oil and Gas Extraction",32069
+Utilities,46245
+Construction,1490099
+Manufacturing,637810
+Wholesale Trade,697359
+Retail Trade,1794062
+Transportation and Warehousing,588529
+Information,358572
+Finance and Insurance,782705
+Real Estate and Rental and Leasing,868526
+"Professional, Scientific, and Technical Services",2294049
+Management of Companies and Enterprises,70791
+Administrative and Support and Waste Management and Remediation Services,1647950
+Educational Services,424190
+Health Care and Social Assistance,1745915
+"Arts, Entertainment, and Recreation",369206
+Accommodation and Food Services,907516
+Other Services (except Public Administration),1915436
+Public Administration,258094
