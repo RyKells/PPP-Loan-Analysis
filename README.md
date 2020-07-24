@@ -87,6 +87,10 @@ At first my instinct led my to believe that the states most afflicted by COVID-1
 
 Sector DF
 
+![Sector_vs Avg](Charts/Sector_vs_Avg.png)
+
+
+
 Indusry Group DF
 
 Top 
