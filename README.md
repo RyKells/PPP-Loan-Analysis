@@ -40,7 +40,7 @@ Looking at the remaining columns, there were several that had good data, but I f
 
 The `BusinessType` column contained 17 unique values: `Rollover as Business Start-Ups (ROB)`, `Employee Stock Ownership Plan(ESOP)`, `Joint Venture`,`Tenant in Common`, `Trust`, `Non-Profit Childcare Center`, `Cooperative`, `Professional Association`, `Limited Liability Partnership`, `Partnership`, `Independent Contractors`, `Non-Profit Organization`, `Self-Employed Individuals`, `Subchapter S Corporation`, `Sole Proprietorship`, `Corporation`, `Limited Liability Company(LLC)`. The breakdown of loans by business type was particularly top heavy, not surprising, with the top 10 business types making up 99.78% of loans.
 
-![BusinessTypes](Charts/BusinessTypes.png)
+![BusinessTypes](Charts/BusinessTypes2.png)
 
 ### 2. Merging, Importing and Cleaning REPHESH MASTER.CSV PLACEHOLDER
 My first step in dealing with the sub $150k dataset was to merge all of of the `.csv` values into one master `.csv`. I first downloaded and unziped the `.zip` file from the SBA, then placed the individual files into one master folder and merged them together using `cat *.csv > Master.csv`. For the purposes of this analysis I was only interested in looking at the 50 U.S. states along with District of Columbia (D.C.). Once I had my master `.csv` I used Docker images provided by Jupyter Docker Stacks to create and start a container with Spark and PySpark.
@@ -87,7 +87,7 @@ At first my instinct led my to believe that the states most afflicted by COVID-1
 
 Sector DF
 
-![Sector_vs Avg](Charts/Sector_vs_Avg.png)
+![Sector_vs Avg](Charts/Sector_vs_Avg2.png)
 
 
 
