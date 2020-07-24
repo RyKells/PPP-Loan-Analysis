@@ -1,5 +1,5 @@
 # PPP Loan Analysis
-A look at the distribution of Paycheck Protection Program (PPP) loans.
+## A look at the distribution of Paycheck Protection Program (PPP) loans.
 
 ![PPP Image](Images/SBA-PPP.jpg)
 
