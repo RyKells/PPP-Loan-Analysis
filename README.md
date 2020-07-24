@@ -61,18 +61,29 @@ The NAICS data was made avilable through their [website](https://www.naics.com/)
 After getting my data cleaned I next wanted to look at several subsets of the data in order to answer my motivating questions: state data, sector data, industry group data, and finally industry group data.
 
 ### State Data:
+My fist steps in looking at the state data was to examine the relationships between the number of businesses in each state vs. 1) the number of loans 2) the amount loaned. What does this relationship look like? Are there any/many outliers?
+
+Next I wanted to examine the percentage of businesses in each state that were funded. Again, is the distribution fairly uniform or are there outier states?
+
+Finally, I wanted to examine the ratio of jobs retained vs. the amount loaned. This can be thought of an efficiency or 'bang-for-your-buck' metric.
+
+### State Relationships:
+
 Looking at the state data I was a little taken aback at how linear the relationship was between the number of loans per state and the number of busineses per state.
 
 ![LC_vs_Bus_State](Charts/N_Loans_vs_N_Businesses_State.png)        
-
 
 Given the relationship of the first chart, it wasn't too surpising to see that the amount of loans per state had a similarly linear relationship with the number of businesses in each state.
 
 ![LA_vs_Bus_State](Charts/Amount_Loaned_vs_N_Businesses_State.png)
 
+Looking at the distribution of the percentage of businesses that received funding in each state, 
 
 
-State DF
+
+At first my instinct led my to believe that the states most afflicted by COVID-19 would have a more skewed higher proportion of loans an
+
+
 
 Sector DF
 
