@@ -112,18 +112,18 @@ Again, to further explore this outlier, I decided to look at a probability densi
 
 I used a 95% confidence interval, same as before, and again found that every state fit within the 95% confidence interval, except for Utah. Utah's ratio of Jobs Retained (per thousand) to Loan Amount Received (per million) came in at 0.2389. According to the CDF, this indicates a likelihood of 0.007%. There wasn't anything that stood out to me in particular about Utah, but after digging deeper, it appears that a substantial portion *approx ~ 20%* of the state's PPP money was lent out by one bank, Zions Bank, which is headquartered in Salt Lake City and is the [largest full-service commerical bank in Utah](https://www.sec.gov/Archives/edgar/data/109380/000010938020000092/zions-20191231.htm) and outnumbers both JPMorganChase and Wells Fargo in number of branches within the state.  
 
-### Sector Data:
+### Sector Data & Analysis:
 After examining the state data, I next took a look at the NAICS sector data an specifically looked at a breakdown of sectors vs. the average loan.
 
 
 ![Sector_vs Avg](Charts/Sector_vs_Avg5.png)
 
 
-It was not surpusing to see sectors like Construction, Food Services, Health Care, and Manufacturing come in above average in terms of loan amounts given how these sectors were affected by COVID-19. 
+It was not surprising to see sectors like Construction, Food Services, Health Care, and Manufacturing come in above average in terms of loan amounts given how these sectors were affected by COVID-19. The one sector I was surprised to see on the low end was Tranportation and Warehousing. It would seem to me that in a world with mandated shutdowns that the trasportation sector would be struggling.
 
-Indusry Group DF
+### Industry Group Summary:
 
-Top 
+#### Top 10 Industry Groups
 
 |                NAICS Industry Group               | Industry Group Funding as a % of Average |
 |:-------------------------------------------------:|:----------------------------------------:|
@@ -139,7 +139,7 @@ Top
 | Metalworking Machinery Manufacturing              |                  164.00%                 |
 
 
-Most underfunded 
+#### Bottom 10 Industry Groups
 
 |                NAICS Industry Group               | Industry Group Funding as a % of Average |
 |:-------------------------------------------------:|:----------------------------------------:|
@@ -155,9 +155,10 @@ Most underfunded
 | Sheep and Goat Farming                            |                  64.48%                  |
 
 
-Industry DF
+### Industry Summary:
 
-TOP
+#### Top 10 Industries
+
 |               NAICS Industry              | Industry Funding as a % of Average |
 |:-----------------------------------------:|:----------------------------------:|
 | Softwood Veneer and Plywood Manufacturing |               250.10%              |
@@ -171,7 +172,9 @@ TOP
 | Steel Foundries (except Investment)       |               199.14%              |
 | Aluminum Foundries (except Die-Casting)   |               197.81%              |
 
-Bottom
+
+#### Bottom 10 Industries
+
 |           NAICS Industry          | Industry Funding as a % of Average |
 |:---------------------------------:|:----------------------------------:|
 | Silver Ore Mining                 |               24.63%               |
@@ -184,3 +187,7 @@ Bottom
 | Footwear and Leather Goods Repair |               44.49%               |
 | Shellfish Fishing                 |               45.29%               |
 | Beauty Salons                     |               45.83%               |
+
+
+## Wrap-Up and Further Analysis:
+The sub $150k PPP loan dataset is quite extensive. I wish I could have dug a little bit deeper into the NAICS data to get a better idea of the underlying distribution of PPP money. I also would have liked to get a choropleth map together to examine various variables throughout the U.S. (either by state, city, or zip code). Additionally, pulling in population data would be interesting to see how things are broken down on a per capita basis. There are a lot of different ways to slice the data.
