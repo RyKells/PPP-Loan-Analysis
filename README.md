@@ -1,14 +1,16 @@
 # PPP Loan Analysis
 A look at the distribution of Payroll Protection Program (PPP) loans.
 
+![PPP Image](Images/SBA-PPP.jpg)
+
 ## Background:
-The Coronavirus Aid, Relief, and Economic Security [(CARES)](https://home.treasury.gov/policy-issues/cares) Act was signed into law on March 27th, 2020 in the midst of the COVID-19 global pandemic which sent shockwaves through the U.S.(and global)economy. Within the CARES Act was a provision called the Payroll Protection Program (PPP), which was designed to loan money to small businesses to provide them with the resources needed to maintain their payroll, hire back employees who may have been laid off, and cover applicable overhead. Initially, $349B was allocated to the PPP program, however, after the program ran out of funding in two weeks (processing 14 years’ worth of loans), congress replenished the program with an [additional $320B.](https://thehill.com/homenews/administration/493910-white-house-congress-reach-deal-to-replenish-small-business-loan)
+The Coronavirus Aid, Relief, and Economic Security [(CARES)](https://home.treasury.gov/policy-issues/cares) Act was signed into law on March 27th, 2020 in the midst of the COVID-19 global pandemic which sent shockwaves through the U.S.(and global) economy. Within the CARES Act was a provision called the Payroll Protection Program (PPP), which was designed to loan money to small businesses to provide them with the resources needed to maintain their payroll, hire back employees who may have been laid off, and cover applicable overhead. Initially, $349B was allocated to the PPP program, however, after the program ran out of funding in two weeks (processing 14 years’ worth of loans), congress replenished the program with an [additional $320B.](https://thehill.com/homenews/administration/493910-white-house-congress-reach-deal-to-replenish-small-business-loan)
 
 ## Motivating Questions:
-What was the distribution of PPP loans?
-Did certain states disproportionately benefit from the PPP loan program?
-Did certain sectors or industries receive more or less funding than others?
-What was the relationship between jobs retained and the loan amount?
+* What was the distribution of PPP loans?
+* Did certain states disproportionately benefit from the PPP loan program?
+* Did certain sectors or industries receive more or less funding than others?
+* What was the relationship between jobs retained and the loan amount?
 
 ## The Data:
 The data was made available through the Small Business Administration (SBA) [website](https://www.sba.gov/funding-programs/loans/coronavirus-relief-options/paycheck-protection-program), the governmental agency tasked with the implementation of the PPP program (along with participating lenders). Initially, the SBA only released loan data for companies that received loans of less than $150k. However, after mounting pressure from Congress, governmental oversight agencies, and outside groups, the SBA released loan data for companies that received a loan of more than [$150k.](https://fortune.com/2020/06/22/ppp-loan-transparency-biggest-loans-companies-nonprofits-recipients/) 
@@ -27,10 +29,10 @@ My initial EDA looked at a single state (Colorado) in order to get a feel for th
 
 The `NonProfit` column seemed to exhibit a similar lack of information like the `RaceEthnicity`,`Gender`, and `Veteran` columns, except Nonprofit companies were marked `Y` while For-Profit companies showed up as `null` values. After resolving/cleaning the `NonProfit` column, it became clear just how skewed the data was towards For-Profit organizations. The table below shows the For-Profit/Non-Profit breakdown on the entirety of the cleaned dataset.
 
-|   Entity   | % of Loans |
-|----------------|--------------|
-| For-Profit     |    96.55%    |
-| Non-Profit |    3.45%    |
+|    Entity  | % of Loans |
+|:----------:|:----------:|
+| For-Profit |   96.55%   |
+| Non-Profit |    3.45%   |
 
 The one column I knew at first glance I had no interst in touching was `CD` Congressional District. Given today's political climate, I had zero interest in doing any analysis tied to politics. I also believe the confounding variables surrounding Coronavirus and the PPP program itself make the datapoint incredibly messy to analyze.
 
