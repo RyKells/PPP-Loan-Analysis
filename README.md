@@ -89,4 +89,64 @@ Sector DF
 
 Indusry Group DF
 
+Top 
+
+|                NAICS Industry Group               | Industry Group Funding as a % of Average |
+|:-------------------------------------------------:|:----------------------------------------:|
+| Spring and Wire Product Manufacturing             |                  186.66%                 |
+| Foundries                                         |                  180.39%                 |
+| Resin, Synthetic Rubber, and Artificial and Sy... |                  175.05%                 |
+| Plastics Product Manufacturing                    |                  171.90%                 |
+| Offices of Dentists                               |                  170.52%                 |
+| Cement and Concrete Product Manufacturing         |                  168.09%                 |
+| Forging and Stamping                              |                  167.87%                 |
+| Steel Product Manufacturing from Purchased Steel  |                  167.81%                 |
+| Iron and Steel Mills and Ferroalloy Manufacturing |                  167.74%                 |
+| Metalworking Machinery Manufacturing              |                  164.00%                 |
+
+
+Most underfunded 
+
+|                NAICS Industry Group               | Industry Group Funding as a % of Average |
+|:-------------------------------------------------:|:----------------------------------------:|
+| Taxi and Limousine Service                        |                  32.62%                  |
+| Other Transit and Ground Passenger Transportation |                  46.19%                  |
+| Independent Artists, Writers, and Performers      |                  47.40%                  |
+| Personal Care Services                            |                  47.51%                  |
+| Oilseed and Grain Farming                         |                  52.01%                  |
+| Fishing                                           |                  52.01%                  |
+| Offices of Real Estate Agents and Brokers         |                  58.48%                  |
+| Poultry and Egg Production                        |                  59.71%                  |
+| Hunting and Trapping                              |                  59.86%                  |
+| Sheep and Goat Farming                            |                  64.48%                  |
+
+
 Industry DF
+
+TOP
+|               NAICS Industry              | Industry Funding as a % of Average |
+|:-----------------------------------------:|:----------------------------------:|
+| Softwood Veneer and Plywood Manufacturing |               250.10%              |
+| Kaolin and Ball Clay Mining               |               231.83%              |
+| Cane Sugar Manufacturing                  |               217.58%              |
+| Polystyrene Foam Product Manufacturing    |               217.55%              |
+| Paperboard Mills                          |               215.22%              |
+| Truss Manufacturing                       |               201.25%              |
+| Powder Metallurgy Part Manufacturing      |               199.86%              |
+| Spring Manufacturing                      |               199.61%              |
+| Steel Foundries (except Investment)       |               199.14%              |
+| Aluminum Foundries (except Die-Casting)   |               197.81%              |
+
+Bottom
+|           NAICS Industry          | Industry Funding as a % of Average |
+|:---------------------------------:|:----------------------------------:|
+| Silver Ore Mining                 |               24.63%               |
+| Taxi Service                      |               26.80%               |
+| Photography Studios, Portrait     |               37.66%               |
+| Barber Shops                      |               37.96%               |
+| Beet Sugar Manufacturing          |               38.00%               |
+| Other Urban Transit Systems       |               42.91%               |
+| Limousine Service                 |               44.36%               |
+| Footwear and Leather Goods Repair |               44.49%               |
+| Shellfish Fishing                 |               45.29%               |
+| Beauty Salons                     |               45.83%               |
