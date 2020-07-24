@@ -58,6 +58,14 @@ The 2-digit sector codes contain 24 unique values, which map to 20 unique sector
 The NAICS data was made avilable through their [website](https://www.naics.com/) and represents data from 2017 *(the most recent)*. From the NAICS I was able to pull the number of businesses by sector, industry group, industry, and state. After collecting the data, I created new columns in my PySpark dataframe for the NAICS 2 and 4 digit codes, along with corresponding names for the 2-digit sectors, 4-digit industry codes,and 6 digit industries. The NAICS data was then imported into new dataframes in PySpark and joined with the existing dataset. Once I had incorporated all of the NAICS data into my existing dataset I again cleaned out all `null` values, which removed 95,671 loans leaving me with a final cleaned dataset of *3,693,353 loans* *(~88.28% of the original uncleaned dataset)*.
 
 ### 3. Analysis & Data Subsets
+After getting my data cleaned I next wanted to look at several subsets of the data in order to answer my motivating questions: state data, sector data, industry group data, and finally industry group data.
+
+### State Data:
+Looking at the state data
+
+![Types](Charts/BusinessTypes.png)        ![BusinessTypes](Charts/BusinessTypes.png)
+
+
 
 State DF
 
